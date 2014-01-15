@@ -31,6 +31,7 @@ html,body {
 
 #FlagItself .top, #FlagItself .bottom {
 	height: 50%;
+	/*overflow: hidden;*/
 }
 
 #FlagItself .top {
@@ -41,13 +42,13 @@ html,body {
 	background-color: #2E5B73;
 }
 
-#FlagItself .bottom div, #FlagItself .top div {
+#FlagItself .bottom div.container, #FlagItself .top div.container {
 	/*opacity: .5;*/
 	height: 100%;
 	/*display: none;*/
 }
 
-#QuadrantOne {
+/*#QuadrantOne {
 	background-color: #7EFA71;
 }
 
@@ -61,25 +62,141 @@ html,body {
 
 #QuadrantFour {
 	background-color: #F8BD7F;
-}
+}*/
 
-#FlagItself .bottom div.rando_stripe, #FlagItself .top div.rando_stripe {
+#FlagItself .bottom div.stripe, #FlagItself .top div.stripe {
 	height: 20%;
 }
 
 /*-------- Flag Animations --------*/
 
-#FlagItself div.slide:hover {   
+#FlagItself div.bottom:hover .slide {   
     width:100%;
 }
 
 #FlagItself div.slide {
-	width: 2%;
+	width: 0%;
 	-webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
 }
+
+
+/*-------- Flag Shapes --------*/
+
+.shape_holder {
+	float: left;
+	width: 10%;
+	height: 100%;
+}
+
+.shape_holder img {
+	width: 100%;
+	height: 100%;
+}
+
+.triangle-up {
+	width: 15%;
+	height: 0;
+	padding-left: 15%;
+	padding-bottom: 15%;
+	overflow: hidden;
+}
+.triangle-up div {
+	width: 0;
+	height: 0;
+	margin-left: -250px;
+	border-left: 250px solid transparent;
+	border-right: 250px solid transparent;
+	border-bottom: 400px solid #4679BD;
+}
+
+/*.triangle-up {
+    width: 25%;
+    height: 0;
+    padding-left:25%;
+    padding-bottom: 25%;
+    overflow: hidden;
+}
+.triangle-up div {
+    width: 0; 
+    height: 0;
+    margin-left:-500px;
+    border-left: 500px solid transparent;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #4679BD;
+}*/
+
+/*#six-point-star {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-left: 50px solid transparent; 
+	border-right: 50px solid transparent; 
+	border-bottom: 80px solid #7EFA71;
+}
+#six-point-star:after {
+	content:"";
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-left: 50px solid transparent; 
+	border-right: 50px solid transparent; 
+	border-top: 80px solid #7EFA71;
+	margin: 30px 0 0 -50px;
+}
+
+#star-five {
+   margin: 50px 0;
+   position: relative;
+   display: block;
+   color: red;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid red;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+}
+#star-five:before {
+   border-bottom: 80px solid red;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five:after {
+   position: absolute;
+   display: block;
+   color: red;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid red;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}*/
+
 
 /*-------- Speakers --------*/
 
