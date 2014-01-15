@@ -1,3 +1,115 @@
-section #NewFlag {
+html,body {
+	height: 100%;
+}
+
+/*-------- General Classes ---------*/
+
+.left, .right {
+	display: inline-block;
+	width: 50%;
+}
+
+.left {
+	float: left;
+}
+
+/*-------- Your New Flag --------*/
+
+#NewFlag {
 	background-color:#F5DD94;
+	height: calc(100% - 40px);
+		height: -o-calc(100% - 40px); /* opera */
+		height: -webkit-calc(100% - 40px); /* google, safari */
+		height: -moz-calc(100% - 40px); /* firefox */
+	padding: 20px;
+}
+
+#FlagItself {
+	background-color: #272822;
+	height: 100%;
+}
+
+#FlagItself .top, #FlagItself .bottom {
+	height: 50%;
+}
+
+#FlagItself .top {
+	background-color: #ED376E;
+}
+
+#FlagItself .bottom {
+	background-color: #2E5B73;
+}
+
+#FlagItself .bottom div, #FlagItself .top div {
+	/*opacity: .5;*/
+	height: 100%;
+	/*display: none;*/
+}
+
+#QuadrantOne {
+	background-color: #7EFA71;
+}
+
+#QuadrantTwo {
+	background-color: #D798B3;
+}
+
+#QuadrantThree {
+	background-color: #9EE1D2;
+}
+
+#QuadrantFour {
+	background-color: #F8BD7F;
+}
+
+#FlagItself .bottom div.rando_stripe, #FlagItself .top div.rando_stripe {
+	height: 20%;
+}
+
+/*-------- Flag Animations --------*/
+
+#FlagItself div.slide:hover {   
+    width:100%;
+}
+
+#FlagItself div.slide {
+	width: 2%;
+	-webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+
+/*-------- Speakers --------*/
+
+#Speakers {
+	background-color:#F5DD94;
+	height: calc(100% - 40px);
+		height: -o-calc(100% - 40px); /* opera */
+		height: -webkit-calc(100% - 40px); /* google, safari */
+		height: -moz-calc(100% - 40px); /* firefox */
+	padding: 20px;
+}
+
+#Speakers .left, #Speakers .right {
+	display: inline;
+	float: none;
+}
+
+#Speakers .left img, #Speakers .right img {
+	height: 100%;
+	width: calc(50% - 2px);
+		width: -o-calc(50% - 2px); /* opera */
+		width: -webkit-calc(50% - 2px); /* google, safari */
+		width: -moz-calc(50% - 2px); /* firefox */
+}
+
+#Speakers .right img {
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
