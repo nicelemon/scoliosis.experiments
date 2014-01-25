@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="steez/toucan-reset.css" />
+		<link rel="stylesheet" type="text/css" href="steez/deeznuts.css" />
+		<script type="text/javascript" src="jambajuice/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="jambajuice/my-main.js"></script>
+		<script type="text/javascript" src="jambajuice/tree-sixty.js"></script>
+		<script language="javascript">
+			$(function() {
+
+				//l'array ARR va contenir la liste des images
+				var arr = [];
+				//trop lazy pour tout taper... 
+				for (var x=0; x<= 250; x++)
+					arr.push("img/golden-nut/" +x + ".png");
+				// var arr2 = []
+				// for (var x=1; x<= 10; x++)
+				// 	arr2.push(x + ".png");
+				
+				//bindons le widget rotate � l'image pic avec la liste d'image arr
+				$("#mousemove").threesixty({images:arr, method:'mousemove', 'cycle':3, direction:"backward"});
+				// $("#click").threesixty({images:arr2, method:'click', 'cycle':1, 'resetMargin': 10});
+				// $("#auto").threesixty({images:arr2, method:'auto', autoscrollspeed:100});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="img/golden-nut/0.png" id="mousemove" width="799" height="746" />
+		</div>
+	</body>
+</html>
